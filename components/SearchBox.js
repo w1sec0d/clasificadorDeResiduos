@@ -3,7 +3,7 @@ import { TextInput, StyleSheet, View } from "react-native";
 import colors from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons/";
 
-const SearchBox = () => {
+const SearchBox = ({ value, setValue }) => {
   return (
     <View style={styles.textView}>
       <MaterialCommunityIcons
@@ -12,7 +12,7 @@ const SearchBox = () => {
         size={30}
         style={styles.icon}
       />
-      <TextInput value={"Busca tu residuo"} style={styles.textInput} />
+      <TextInput value={value} style={styles.textInput} onChange={setValue} />
     </View>
   );
 };
